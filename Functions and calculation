@@ -1,0 +1,49 @@
+import math
+
+#The investment function can calculate simple or compound interest using below formulas depending on user choice 
+def investment(one_way):
+    
+    if user_input_3 == "simple":
+        
+        investment  = A = principal_amount * (1 + interest_rate * time)
+            
+        return investment
+
+    else:
+        user_input_3 == "compound:"
+        
+        investment = A = principal_amount * math.pow ((1 + interest_rate), time)
+
+        return investment
+    
+#The bond investment function will calculate the interest based on the user house value and interest offered
+def bond(one,two,three):
+
+    bond = (house_value * interest_rate)/(1 - (1 + interest_rate) ** (-months))
+
+    return bond
+
+#Below used a "IF" statement to employ different formula dependent on what the user chooses. 
+user_input_1 = input("Please choose type of investment either investment or bond")
+
+if user_input_1 == "investment":
+    principal_amount = int(input("Please enter the amount of money you are investing"))
+    interest_rate = float(input("Please enter the interest rate"))
+    interest_rate = (interest_rate/100) 
+    time = int(input("Please enter the number of years you plan on investing"))
+    user_input_3 = str(input("Please choose simple or compound interest"))
+
+        
+    total_investment_return = investment(user_input_3)
+
+    print(f"the total return you can expect on your initial investment is: £{total_investment_return}GBP")
+
+else:
+    house_value = int(input("Present value of the house"))
+    interest_rate = int(input("Please enter the interest rate"))
+    months = int(input("please enter number of months you plan to repay bond"))
+    interest_rate = (interest_rate/100)/12 
+
+
+    total_bond_return = bond(house_value,interest_rate,months)
+    print(total_bond_return)
