@@ -13,3 +13,16 @@ if len(str_manip) >0:
 
 else:
     print("please enter a sentence")
+##############################################################
+#Classic coding string manipulation - replace space with !
+word = "The!quick!brown!fox!jumps!over!the!lazy!dog."
+word = word.replace("!", " ")
+print(word)
+
+#Capitalising string
+word = word.upper()
+print(word)
+
+#Printing last three letters of string
+position = word [::-1]
+print(position)
