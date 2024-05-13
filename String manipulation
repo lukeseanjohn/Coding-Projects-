@@ -1,0 +1,15 @@
+#calculationg length of a string and manipulating each individual letter 
+user_input = input("please enter a sentence")
+print("you entered following sentence:", user_input)
+print(len(user_input))
+
+#Once length is found replace all occurences of the last letter with a "@"
+str_manip = user_input
+last_letter = str_manip [-1]
+
+if len(str_manip) >0:
+    modified_input = str_manip.replace (last_letter, "@")
+    print(modified_input)
+
+else:
+    print("please enter a sentence")
