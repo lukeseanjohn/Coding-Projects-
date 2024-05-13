@@ -13,3 +13,23 @@ elif age <=13:
     
 else:
     print("Age is but a number")
+################################################################
+swim_time = int(input("Please enter your swim time"))
+run_time = int(input("Please enter your run time"))
+cycling_time = int(input("Please enter your cycling time"))
+
+
+total_time = swim_time + run_time + cycling_time
+print(total_time)
+
+
+if  total_time <= 100:
+    award = "provincial colours"
+elif total_time >=101 and total_time <=105:
+    award = "provincial half colours"
+elif total_time >=106 and total_time <=110:
+    award = "provincial scroll"
+else:
+    award = "No award"
+
+print(f"The participant will receive the award: {award}")
