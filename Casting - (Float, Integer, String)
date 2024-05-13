@@ -1,0 +1,20 @@
+#Converting an integer to a float
+user_input = float(input("please enter a number"))
+
+float = user_input
+
+print(float)
+
+
+#Converting user input to an integer
+user_input_2 = int(input("please enter a number"))
+
+int = user_input_2
+
+print(int)
+
+#Converting a integer to a string
+
+integer = 100
+string = str(integer)
+print(string)
