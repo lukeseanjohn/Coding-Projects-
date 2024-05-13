@@ -1,0 +1,58 @@
+# Gives cost for each destination
+def plane_cost(city_flight):
+            '''Gives cost for plane travel to each city destination'''
+            if city_flight == "Cape Town":
+                return 500
+            elif city_flight == "Paris":
+                return 100
+                
+            else:
+                 return 600
+    
+# Multiplies hotel budget with number of nights stay
+def hotel_cost(num_nights, hotel):
+    hotel_cost_dict = {"grand": 1000, "humble": 100, "shoestring" : 10} 
+    hotel_cost = hotel_cost_dict [hotel] * num_nights
+
+    return hotel_cost
+   
+ # Multiplies car rental with cost of rental per day
+def car_rental(rental_days):
+    cost_per_day = 30
+    total = rental_days * cost_per_day
+
+    return total
+
+# Add values of all functions together to get overall holiday cost
+def holiday_cost(def_hotel_cost,def_plane_cost, def_car_rental):
+    holiday_cost = def_hotel_cost + def_plane_cost + def_car_rental
+
+    return holiday_cost
+
+# Code requesting for user input for holiday details
+destination = input("Please choose Madrid, Paris or Cape Town")
+
+# A while loop to check for user input error
+while destination != "Madrid" and destination != "Paris" and destination != "Cape Town":
+    destination = input("Please choose Madrid, Paris or Cape Town")
+    
+print("Your choice is:", destination)
+
+num_nights = int(input("Please enter the number of nights you will be staying at the hotel"))
+
+# A while loop to check for user input error
+hotel = input("Please pick your hotel budget: grand, humble or shoestring")
+while hotel != "grand" and hotel != "humble" and hotel != "shoestring":
+     hotel = input("Please pick your hotel budget: grand, humble or shoestring")
+     
+print(f"Your hotel budge is {hotel}")
+     
+rental_days = int(input("Please enter the number of days you will be hiring a car"))
+
+# Calculating the cost of each part of the holiday and then ading together to get overall cost
+total_plane_cost = plane_cost(destination)
+total_hotel_cost = hotel_cost(num_nights,hotel)
+total_car_rental = car_rental(rental_days)
+total_holiday_cost = holiday_cost(total_hotel_cost, total_plane_cost, total_car_rental)
+
+print(f"Your total holiday cost including hotel, flights and car rental is: £{total_holiday_cost}.00GBP")
