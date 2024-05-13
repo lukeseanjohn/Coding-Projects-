@@ -1,0 +1,9 @@
+#Requesting user details and returning values
+name = input("please enter your name")
+age = int(input("please enter your age"))
+house_number = int(input("please enter your house number"))
+street = input("please enter the street name where you live")
+
+
+#Returning user values
+print(f"{name} is {age} and lives at house number {house_number} on street name {street}")
