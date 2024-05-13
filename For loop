@@ -1,0 +1,11 @@
+#Creating pyramid pattern using a for loop
+
+pattern = "*"
+for i in range (1,10):
+    top_half_of_pattern = pattern * i 
+
+if i >= 6:
+bottom_half_of_pattern = 10 - i  
+top_half_of_pattern = pattern * bottom_half_of_pattern
+
+print(top_half_of_pattern)
