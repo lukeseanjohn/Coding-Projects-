@@ -1,0 +1,17 @@
+#Organising cafe menu into a list
+cafe_menu = ["egg","toast", "beans", "cheese"]
+
+#Assigning cafe menu items a value using a dictionary
+stock = {"egg":10, "toast":15, "beans":30, "cheese":35}
+
+#Assigning cafe menu items a price using a second dictionary
+price = {"egg":2,"toast":3,"beans":2,"cheese":4}
+
+total = 0
+#Iterating through the two dictionary values and mutiplying them together to get each item's total value
+for item in cafe_menu:
+    total_cost = price[item] * stock[item]
+    print(total_cost)
+    total += total_cost
+
+print(total)
