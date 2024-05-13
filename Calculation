@@ -1,0 +1,19 @@
+#Simple calculations
+num_1 = int(input("please enter first number"))
+num_2 = int(input("please enter second number"))
+num_3 = int(input("please enter third number"))
+
+#Addition
+calculation_1 = num_1 + num_2 + num_3
+print(calculation_1)
+#Subtaraction
+calculation_2 = num_1 - num_2
+print(calculation_2)
+
+#Multiplication
+calculation_3 = num_3 * num_1
+print(calculation_3)
+
+#Division
+calculation_4 = (num_1 + num_2 + num_3)
+print(calculation_4 /num_3)
